@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GATE CSE 2026 Mock Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+<header class="header">
+  <h2>GATE Mock Test Platform</h2>
+
+  <select id="mockSelect">
+    <option value="">Select Mock</option>
+  </select>
+
+  <button id="startBtn">Start Test</button>
+
+  <div class="timer">
+    Time Left: <span id="time">--:--:--</span>
+  </div>
+</header>
+
+
+  <!-- MAIN LAYOUT -->
+  <div class="main">
+
+    <!-- LEFT: QUESTION AREA -->
+    <section class="question-area">
+      <div class="question-meta" id="questionMeta">
+        Question 1 | GA | 1 Mark
+      </div>
+
+      <div class="question-text" id="questionText">
+        Question text will appear here
+      </div>
+
+      <div class="options" id="options">
+        <!-- Options rendered by JS -->
+      </div>
+
+      <div class="actions">
+        <button id="clearBtn">Clear Response</button>
+        <button id="markBtn">Mark for Review</button>
+      </div>
+
+      <div class="navigation">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+      </div>
+    </section>
+
+    <!-- RIGHT: QUESTION PALETTE -->
+    <aside class="palette">
+      <h3>Question Palette</h3>
+      <div class="palette-grid" id="palette">
+        <!-- 1–65 buttons via JS -->
+      </div>
+      <button class="submit-btn" id="submitBtn">
+        Submit Test
+      </button>
+    </aside>
+
+  </div>
+
+  <!-- MAIN LOGIC -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>

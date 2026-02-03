@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GATE Admin – PDF to JSON</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    textarea { width: 100%; height: 200px; }
+    input, select, button { margin: 5px 0; }
+    .box { border: 1px solid #ccc; padding: 10px; margin-bottom: 15px; }
+  </style>
+</head>
+<body>
+
+<h2>GATE Admin Tool – PDF to JSON</h2>
+
+<div class="box">
+  <h3>1. Upload PDF</h3>
+  <input type="file" id="pdfFile" accept="application/pdf">
+  <button onclick="readPDF()">Extract Text</button>
+</div>
+
+<div class="box">
+  <h3>2. Extracted Text (Edit if needed)</h3>
+  <textarea id="pdfText"></textarea>
+</div>
+
+<div class="box">
+  <h3>3. Create Question JSON</h3>
+
+  <input id="qno" placeholder="Question No">
+  <select id="section">
+    <option>GA</option>
+    <option>CSE</option>
+  </select>
+  <select id="type">
+    <option>MCQ</option>
+    <option>MSQ</option>
+    <option>NAT</option>
+  </select>
+  <input id="marks" placeholder="Marks">
+  <input id="negative" placeholder="Negative (0 / 0.33 / 0.66)">
+
+  <textarea id="question" placeholder="Question text"></textarea>
+  <textarea id="options" placeholder="Options (one per line)"></textarea>
+
+  <button onclick="addQuestion()">Add Question</button>
+</div>
+
+<div class="box">
+  <h3>4. Generated JSON</h3>
+  <textarea id="output"></textarea>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
